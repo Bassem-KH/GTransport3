@@ -1,0 +1,67 @@
+{# empty Twig template #}
+
+<h2>Liste des Vehicules Personnelles Disponibles</h2>
+{% if vehicules is empty %}
+    Aucune Vehicule Disponible
+    
+     {% else%}
+<table border="1">
+    
+    <tr>
+        <td>Id</td>
+        <td>Marque</td>
+        <td>NbrPlace</td>
+        <td>NumImmatricule</td>
+        <td>Kilomtetragel</td>
+        <td>Modele</td>
+        <td>DateDachat</td>
+        <td>Carburant</td>
+        <td>EtatVehicule</td>
+        <td>PuissanceFiscale</td>
+        <td>PuissanceMecanique</td>
+        <td>Disponibilité</td>
+        <td>Adresse Parc</td>
+        <td>NomDuResponsable</td>
+        
+       
+        
+        
+    </tr>
+    {%for vehicule in vehicules%}
+        <tr>
+            <td>{{ vehicule.Id }}</td>
+            <td>{{ vehicule.Marque }}</td>
+            <td>{{ vehicule.NbrPlace }}</td>
+            <td>{{ vehicule.NumImmatricule }}</td>
+            <td>{{ vehicule.Kilomtetrage }}</td>
+            <td>{{ vehicule.Modele }}</td>
+            <td>{{ vehicule.DateDachat|date('d/m/y')}}</td>
+            <td>{{ vehicule.Carburant }}</td>
+            <td>{{ vehicule.EtatVehicule }}</td>
+            <td>{{ vehicule.PuissanceFiscale }}</td>
+            <td>{{ vehicule.PuissanceMecanique}}</td>
+            <td>{{ vehicule.Disponibilite}}</td>
+            <td>{{ vehicule.parc}}</td>
+            <td>{{ vehicule.NomDuResponsable}}</td>
+            
+          
+            
+        </tr>
+    {% endfor%}
+    
+    
+</table>
+    {% endif %}
+    
+    <br><br>
+    
+    <a href="{{path("PPE_recherche_VehiculePersonnelle")}}">Rechercher</a>
+    
+    <br>
+    
+   
+        <a href="{{path("PPE_ajout_VehiculePersonnelle")}}">Ajouter Un Vehicule Personnelle</a>
+        
+      <br>
+      
+       <a href="{{path("PPE_list_VehiculePersonnelle")}}">Listes Des Vehicules Personnelles</a>

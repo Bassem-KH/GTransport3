@@ -1,0 +1,82 @@
+{# empty Twig template #}
+
+
+
+
+
+
+<h1> Recherche d'un vehicule de Commerce </h1>
+<form method="POST" action="{{path("PPE_recherche_VehiculeCommerciale")}}">
+    Recherche:<input type="text" name="input_recherche"/>
+    <input type="submit" name="rechercher" value="Rechercher"/>
+</form>
+{% if vehicules is empty %}
+    aucune modele
+    
+    {% else%}
+
+                <table border="1">
+                    <tr>
+                        <td>Id</td>
+                        <td>Marque</td>
+                        <td>NbrPlace</td>
+                        <td>NumImmatricule</td>
+                        <td>Kilomtetragel</td>
+                        <td>Modele</td>
+                        <td>DateDachat</td>
+                        <td>Carburant</td>
+                        <td>EtatVehicule</td>
+                        <td>PuissanceFiscale</td>
+                        <td>PuissanceMecanique</td>
+                        <td>Disponibilité</td>
+                        <td>Adresse Parc</td>
+                        <td>Commerce</td>
+                      
+                                
+                    </tr>
+
+                    {% for vehicule in vehicules %}
+
+                        <tr>
+            <td>{{ vehicule.Id }}</td>
+            <td>{{ vehicule.Marque }}</td>
+            <td>{{ vehicule.NbrPlace }}</td>
+            <td>{{ vehicule.NumImmatricule }}</td>
+            <td>{{ vehicule.Kilomtetrage }}</td>
+            <td>{{ vehicule.Modele }}</td>
+            <td>{{ vehicule.DateDachat|date('d/m/y')}}</td>
+            <td>{{ vehicule.Carburant }}</td>
+            <td>{{ vehicule.EtatVehicule }}</td>
+            <td>{{ vehicule.PuissanceFiscale }}</td>
+            <td>{{ vehicule.PuissanceMecanique}}</td>
+            <td>{{ vehicule.Disponibilite}}</td>
+            <td>{{ vehicule.parc}}</td>
+            <td>{{ vehicule.Commerce}}</td>
+            
+                       
+                    </tr>
+
+
+                    {% endfor %}
+
+                </table>
+                    
+    {% endif %}
+    
+    
+    <br><br>
+    
+    <a href="{{path("PPE_recherche_VehiculeCommerciale")}}">Rénitialiser</a>
+    
+    <br>
+    
+   
+        <a href="{{path("PPE_ajout_VehiculeCommerciale")}}">Ajouter Un Vehicule De Commerce</a>
+        
+      <br>
+    
+   
+        <a href="{{path("PPE_list_VehiculeCommerciale")}}">List Des Vehicules De Comerce</a>
+        
+     
+    

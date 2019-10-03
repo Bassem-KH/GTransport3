@@ -1,0 +1,30 @@
+{# empty Twig template #}
+
+<h2>Liste des parc </h2>
+
+<table border="1">
+    
+    <tr>
+        <th> IdParc </th>
+        <th> Description </th>
+        <th> EspaceMax </th>
+        <th> Adresse </th>
+        <th>Supprimer</th>
+        <th>Modifier</th>
+        
+        
+    </tr>
+    {%for parc in parcs%}
+        <tr>
+            <td> {{parc.Id}}</td>
+            <td> {{parc.Description}} </td>
+            <td> {{parc.EspaceMax}}</td>
+            <td> {{parc.Adresse}} </td>
+            <td> <a href="{{path("PPE_supprimer_parc",{'id':parc.Id})}}">suppimer</a></td>
+            <td> <a href="{{path("PPE_modifier_parc",{'id':parc.Id})}}">modifier</a></td>
+            
+        </tr>
+    {% endfor%}
+    
+    
+</table>

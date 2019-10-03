@@ -1,0 +1,18 @@
+ppe_homepage:
+    path:     /
+    defaults: { _controller: PpeBundle:Default:index }
+PPE_ajout_parc:
+    path:     /addParc
+    defaults: { _controller: GeParcBundle:Parc:add }
+PPE_list_parc:
+    path:     /listParc
+    defaults: { _controller: GeParcBundle:Parc:listparc }
+PPE_supprimer_parc:
+    path:     /SuppParc{id}
+    defaults: { _controller: GeParcBundle:Parc:delete }
+PPE_modifier_parc:
+    path:     /modifi/{id}
+    defaults: { _controller: GeParcBundle:Parc:editParc }
+PPE_recherche_parc:
+    path:     /rechercheP
+    defaults: { _controller: GeParcBundle:Parc:recherche }

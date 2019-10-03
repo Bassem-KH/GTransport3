@@ -1,0 +1,11 @@
+ge_parc:
+    resource: "@GeParcBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ppe:
+    resource: "@PpeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

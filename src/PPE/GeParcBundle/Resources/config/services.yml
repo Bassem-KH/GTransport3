@@ -1,0 +1,4 @@
+services:
+#    ge_parc.example:
+#        class: PPE\GeParcBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

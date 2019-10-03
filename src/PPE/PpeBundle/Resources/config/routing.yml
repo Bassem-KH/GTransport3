@@ -1,0 +1,72 @@
+ppe_homepage:
+    path:     /
+    defaults: { _controller: PpeBundle:Default:index }
+    
+
+
+PPE_ajout_VehiculeTransport:
+    path:     /addVehiculeTransport
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:add }
+PPE_list_VehiculeTransport:
+    path:     /listVehiculeTransport
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:listVehicule }
+PPE_supprimer_VehiculeTransport:
+    path:     /SuppVehiculeTransport{id}
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:delete }
+PPE_modifier_VehiculeTransport:
+    path:     /modifierVehiculeTransport/{id}
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:editV }
+PPE_recherche_VehiculeTransport:
+    path:     /rechercheVehiculeTransport
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:recherche }
+PPE_VehiculeTransport_disp:
+    path:     /listDispVehiculeTransport
+    defaults: { _controller: PpeBundle:VehiculeDeTransport:vehiculeD }
+
+
+
+
+
+
+
+PPE_ajout_VehiculeCommerciale:
+    path:     /addVehiculeCommerciale
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:add }
+PPE_list_VehiculeCommerciale:
+    path:     /listVehiculeCommerciale
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:listVehicule }
+PPE_supprimer_VehiculeCommerciale:
+    path:     /SuppVehiculeCommerciale{id}
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:delete }
+PPE_modifier_VehiculeCommerciale:
+    path:     /modifierVehiculeCommerciale/{id}
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:editV }
+PPE_recherche_VehiculeCommerciale:
+    path:     /rechercheVehiculeCommerciale
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:recherche }
+PPE_VehiculeCommerciale_disp:
+    path:     /listDispVehiculeCommerciale
+    defaults: { _controller: PpeBundle:VehiculeCommerciale:vehiculeD }
+    
+    
+    
+PPE_ajout_VehiculePersonnelle:
+    path:     /addVehiculePersonnelle
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:add }
+PPE_list_VehiculePersonnelle:
+    path:     /listVehiculePersonnelle
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:listVehicule }
+PPE_supprimer_VehiculePersonnelle:
+    path:     /SuppVehiculePersonnelle{id}
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:delete }
+PPE_modifier_VehiculePersonnelle:
+    path:     /modifierVehiculePersonnelle/{id}
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:editV }
+PPE_recherche_VehiculePersonnelle:
+    path:     /rechercheVehiculePersonnelle
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:recherche }
+PPE_VehiculePersonnelle_disp:
+    path:     /listDispVehiculePersonnelle
+    defaults: { _controller: PpeBundle:VehiculePersonnelle:vehiculeD }
+
+

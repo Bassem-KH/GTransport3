@@ -1,0 +1,62 @@
+{# empty Twig template #}
+
+
+
+
+
+
+<h1> Recherche d'un Parc </h1>
+<form method="POST" action="{{path("PPE_recherche_parc")}}">
+    Recherche:<input type="text" name="input_recherche"/>
+    <input type="submit" name="rechercher" value="Rechercher"/>
+</form>
+{% if parcs is empty %}
+    aucun PArc
+    
+    {% else%}
+
+                <table border="1">
+                    <tr>
+                        <th> ID </th>
+                        <th> Description </th>
+                        <th> EspaceMax </th>
+                        <th> Adresse </th>
+                        
+                        
+                    </tr>
+
+                    {% for parc in parcs %}
+
+                        <tr>
+                        <td> {{parc.Id}}</td>
+                        <td> {{parc.Description}} </td>
+                         <td> {{parc.EspaceMax}} </td>
+                        <td> {{parc.Adresse}} </td>
+                       
+                       
+                    </tr>
+
+
+                    {% endfor %}
+
+                </table>
+                    
+    {% endif %}
+    
+    
+    <br><br>
+    
+    <a href="{{path("PPE_recherche_parc")}}">Rénitialiser</a>
+    
+    <br>
+    
+   
+        <a href="{{path("PPE_ajout_parc")}}">Ajouter</a>
+        
+      <br>
+    
+   
+        <a href="{{path("PPE_list_parc")}}">List</a>
+        
+     
+    
